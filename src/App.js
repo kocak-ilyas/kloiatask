@@ -8,9 +8,15 @@ import { getCoffees } from "./redux/actions";
 function App() {
   const dispatch = useDispatch();
   const coffeesReducer = useSelector((state) => state.coffeesReducer);
-  useEffect(() => {
+
+  const getProducts = () => {
     dispatch(getCoffees());
+  };
+
+  useEffect(() => {
+    getProducts();
   }, [dispatch]);
+
   return (
     <div className="App">
       <div className="container m-3 p-2">

@@ -4,6 +4,14 @@ import { changeCategory, searchCoffees } from "../redux/actions";
 
 const Menu = (data) => {
   const dispatch = useDispatch();
+
+  const getChangeCategory = (category) => {
+    dispatch(changeCategory(category));
+  };
+  const getSearchCoffees = (value) => {
+    dispatch(searchCoffees(value));
+  };
+
   return (
     <div>
       <form className="d-flex position-relative pt-3">
@@ -12,19 +20,19 @@ const Menu = (data) => {
           type="search"
           placeholder="Search"
           aria-label="Search"
-          onChange={(e) => dispatch(searchCoffees(e.target.value))}
+          onChange={(e) => getSearchCoffees(e.target.value)}
         />
       </form>
       <br />
       <h6
         className={data?.category === "all" ? "text-primary" : "text-secondary"}
-        onClick={() => dispatch(changeCategory("all"))}
+        onClick={() => getChangeCategory("all")}
       >
         All Coffees
       </h6>
       <h6
         className={data?.category === "hot" ? "text-primary" : "text-secondary"}
-        onClick={() => dispatch(changeCategory("hot"))}
+        onClick={() => getChangeCategory("hot")}
       >
         Hot
       </h6>
@@ -32,7 +40,7 @@ const Menu = (data) => {
         className={
           data?.category === "iced" ? "text-primary" : "text-secondary"
         }
-        onClick={() => dispatch(changeCategory("iced"))}
+        onClick={() => getChangeCategory("iced")}
       >
         Iced
       </h6>
