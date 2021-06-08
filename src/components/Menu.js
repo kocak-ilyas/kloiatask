@@ -4,12 +4,11 @@ import { changeCategory, searchCoffees } from "../redux/actions";
 
 const Menu = (data) => {
   const dispatch = useDispatch();
-
   return (
     <div>
-      <form class="d-flex m-4 p-4">
+      <form className="d-flex m-4 p-4">
         <input
-          class="form-control me-2"
+          className="form-control me-2"
           type="search"
           placeholder="Search"
           aria-label="Search"

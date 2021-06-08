@@ -9,21 +9,23 @@ export const getCoffees = () => async (dispatch) => {
 };
 export const changeCategory = (category) => async (dispatch) => {
   try {
-    const filteredCoffees =
-      category === "all"
-        ? coffeesDB
-        : coffeesDB?.filter((coffee) => coffee.category === category);
-    console.log(filteredCoffees);
-    dispatch({ type: actionTypes.CHANGE_CATEGORY, category, filteredCoffees });
+    dispatch({ type: actionTypes.CHANGE_CATEGORY, category });
+    // const filteredCoffees =
+    //   category === "all"
+    //     ? coffeesDB
+    //     : coffeesDB?.filter((coffee) => coffee.category === category);
+    // dispatch({ type: actionTypes.CHANGE_CATEGORY, category, filteredCoffees });
   } catch (error) {
     console.log(error);
   }
 };
 export const searchCoffees = (filterParameter) => async (dispatch) => {
-  try {console.log(filterParameter)
-    // filterParameter===""?
-    //   {filteredCoffees}=coffees.filter(filterParameter):null
-    //  dispatch({ type: actionTypes.FİLTER, filteredCoffees });
+  try {
+    dispatch({ type: actionTypes.FİLTER, filterParameter });
+    // filterParameter === ""
+    //   ? ({ filteredCoffees } = coffees.filter(filterParameter))
+    //   : null;
+    // dispatch({ type: actionTypes.FİLTER, filteredCoffees });
   } catch (error) {
     console.log(error);
   }
