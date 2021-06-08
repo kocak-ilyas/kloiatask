@@ -3,14 +3,13 @@ import "./App.css";
 import Coffees from "./components/Cooffees/Coffees";
 import Menu from "./components/Menu";
 import { useDispatch, useSelector } from "react-redux";
-import { coffeesDB } from "./db/coffees";
 import { getCoffees } from "./redux/actions";
 
 function App() {
   const dispatch = useDispatch();
-const coffeesReducer = useSelector(state => state.coffeesReducer)
+  const coffeesReducer = useSelector((state) => state.coffeesReducer);
   useEffect(() => {
-    dispatch(getCoffees(coffeesDB));
+    dispatch(getCoffees());
   }, [dispatch]);
   return (
     <div className="App">
