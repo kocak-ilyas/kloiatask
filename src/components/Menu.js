@@ -36,9 +36,6 @@ const Menu = (data) => {
       >
         Iced
       </h6>
-      <hr />
-      <hr />
-      <hr />
     </div>
   );
 };
