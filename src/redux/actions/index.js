@@ -9,7 +9,7 @@ export const getCoffees = () => async (dispatch) => {
 };
 export const changeCategory = (category) => async (dispatch) => {
   try {
-    filteredCoffees =
+    const filteredCoffees =
       category === "all"
         ? coffeesDB
         : coffeesDB?.filter((coffee) => coffee.category === category);

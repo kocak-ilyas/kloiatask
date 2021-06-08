@@ -5,7 +5,7 @@ import { changeCategory, searchCoffees } from "../redux/actions";
 const Menu = (data) => {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="border border-1 border-success">
       <form className="d-flex m-4 p-4">
         <input
           className="form-control me-2"

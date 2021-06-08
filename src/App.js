@@ -12,10 +12,17 @@ function App() {
     dispatch(getCoffees());
   }, [dispatch]);
   return (
-    <div className="App m-1 p-4">
-      <Menu category={coffeesReducer.category} />
-      <hr />
-      <Coffees coffeesReducer={coffeesReducer} />
+    <div className="App">
+      <div className="container">
+        <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+          <div className="col">
+            <Menu category={coffeesReducer.category} />
+          </div>
+          <div className="col-10">
+            <Coffees coffeesReducer={coffeesReducer} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
