@@ -1,8 +1,5 @@
 import { combineReducers } from "redux";
-// import postReducer from "./postReducer";
-// import authReducer from "./authReducer";
+import coffeesReducer from "./coffeesReducer";
 
-const rootReducers = combineReducers({
-    //  postReducer, authReducer 
-});
+const rootReducers = combineReducers({ coffeesReducer });
 export default rootReducers;

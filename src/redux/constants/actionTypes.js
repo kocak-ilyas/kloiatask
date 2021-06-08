@@ -1,8 +1,5 @@
-// export const CREATE = "CREATE";
-// export const UPDATE = "UPDATE";
-// export const DELETE = "DELETE";
-// export const FETCH_ALL = "FETCH_ALL";
-// export const LIKE = "LIKE";
+export const GET_COFFEES = "GET_COFFEES";
+export const CHANGE_CATEGORY = "CHANGE_CATEGORY";
+export const FİLTER = "FİLTER";
 
-// export const AUTH = "AUTH";
-// export const LOGOUT = "LOGOUT";
+
