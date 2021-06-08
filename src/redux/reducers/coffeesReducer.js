@@ -20,4 +20,5 @@ const coffeesReducer = (state = initialState.coffeesState, action) => {
       return state;
   }
 };
+
 export default coffeesReducer;
