@@ -5,17 +5,17 @@ import { changeCategory, searchCoffees } from "../redux/actions";
 const Menu = (data) => {
   const dispatch = useDispatch();
   return (
-    <div className="border border-1 border-success">
-      <form className="d-flex m-4 p-4">
+    <div>
+      <form className="d-flex position-relative pt-3">
         <input
-          className="form-control me-2"
+          className="form-control me-2 border-success"
           type="search"
           placeholder="Search"
           aria-label="Search"
           onChange={(e) => dispatch(searchCoffees(e.target.value))}
         />
       </form>
-
+      <br />
       <h6
         className={data?.category === "all" ? "text-primary" : "text-secondary"}
         onClick={() => dispatch(changeCategory("all"))}

@@ -13,12 +13,12 @@ function App() {
   }, [dispatch]);
   return (
     <div className="App">
-      <div className="container">
-        <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2">
-          <div className="col">
+      <div className="container m-3 p-2">
+        <div className="row">
+          <div className="col-12 col-lg-3 border border-1 border-success p-4">
             <Menu category={coffeesReducer.category} />
           </div>
-          <div className="col-10">
+          <div className="col-12 col-lg-9 border border-1 border-success p-4">
             <Coffees coffeesReducer={coffeesReducer} />
           </div>
         </div>
