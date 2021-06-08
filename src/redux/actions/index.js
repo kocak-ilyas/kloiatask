@@ -19,12 +19,12 @@ export const changeCategory = (category) => async (dispatch) => {
     console.log(error);
   }
 };
-// export const filter = (coffees, filterParameter) => async (dispatch) => {
-//   try {
-//     filterParameter===""?
-//       {filteredCoffees}=coffees.filter(filterParameter):null
-//      dispatch({ type: actionTypes.FİLTER, filteredCoffees });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+export const searchCoffees = (filterParameter) => async (dispatch) => {
+  try {console.log(filterParameter)
+    // filterParameter===""?
+    //   {filteredCoffees}=coffees.filter(filterParameter):null
+    //  dispatch({ type: actionTypes.FİLTER, filteredCoffees });
+  } catch (error) {
+    console.log(error);
+  }
+};

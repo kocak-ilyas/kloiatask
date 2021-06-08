@@ -1,13 +1,21 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { changeCategory } from "../redux/actions";
+import { changeCategory, searchCoffees } from "../redux/actions";
 
 const Menu = (data) => {
   const dispatch = useDispatch();
 
   return (
     <div>
-      <input type="text" placeholder="Search" />
+      <form class="d-flex m-4 p-4">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          onChange={(e) => dispatch(searchCoffees(e.target.value))}
+        />
+      </form>
 
       <h6
         className={data?.category === "all" ? "text-primary" : "text-secondary"}
@@ -17,20 +25,21 @@ const Menu = (data) => {
       </h6>
       <h6
         className={data?.category === "hot" ? "text-primary" : "text-secondary"}
-        onClick={() => dispatch(changeCategory("hot"))}>
+        onClick={() => dispatch(changeCategory("hot"))}
+      >
         Hot
       </h6>
       <h6
         className={
           data?.category === "iced" ? "text-primary" : "text-secondary"
         }
-        onClick={() => dispatch(changeCategory("iced"))}>
+        onClick={() => dispatch(changeCategory("iced"))}
+      >
         Iced
       </h6>
       <hr />
       <hr />
       <hr />
-
     </div>
   );
 };
